@@ -34,11 +34,11 @@ import "@balancer-labs/v2-solidity-utils/contracts/math/Math.sol";
  * in order to know how much BAL a gauge is allowed to mint. As this does not exist within the BAL token itself
  * it is defined here, we must then wrap the token's minting functionality in order for this to be meaningful.
  */
-contract TSYMMTokenAdmin is IBalancerTokenAdmin, SingletonAuthentication, ReentrancyGuard {
+contract MSYMMTokenAdmin is IBalancerTokenAdmin, SingletonAuthentication, ReentrancyGuard {
     using Math for uint256;
 
     // Initial inflation rate of 145k BAL per week.
-    uint256 public constant override INITIAL_RATE = (109695 * 1e18) / uint256(1 weeks); // BAL has 18 decimals
+    uint256 public constant override INITIAL_RATE = (76350 * 1e18) / uint256(1 weeks); // BAL has 18 decimals
     uint256 public constant override RATE_REDUCTION_TIME = 365 days;
     uint256 public constant override RATE_REDUCTION_COEFFICIENT = 1189207115002721024; // 2 ** (1/4) * 1e18
     uint256 public constant override RATE_DENOMINATOR = 1e18;

@@ -12,15 +12,17 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity ^0.7.0;
+pragma experimental ABIEncoderV2;
 
 import "../solidity-utils/openzeppelin/IERC20.sol";
 
-// solhint-disable-next-line max-line-length
-// Based on https://github.com/lidofinance/lido-dao/blob/816bf1d0995ba5cfdfc264de4acda34a7fe93eba/contracts/0.4.24/Lido.sol
+// For compatibility, we're keeping the same function names as in the original Curve code, including the mixed-case
+// naming convention.
+// solhint-disable func-name-mixedcase, var-name-mixedcase
 
-interface IstETH is IERC20 {
-    function submit(address referral) external payable returns (uint256);
+interface IFeeTokenDistributor {
 
-    function deposit(uint256 amount) public returns (bytes32);
+    function depositToken(IERC20 token, uint256 amount) external;
+
 }

@@ -22,5 +22,5 @@ import "../solidity-utils/openzeppelin/IERC20.sol";
 interface IstETH is IERC20 {
     function submit(address referral) external payable returns (uint256);
 
-    function deposit(uint256 amount) public returns (bytes32);
+    function deposit(uint256 amount) external returns (bytes32);
 }

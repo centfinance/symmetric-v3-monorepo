@@ -41,7 +41,7 @@ contract ProtocolFeePercentagesProvider is IProtocolFeePercentagesProvider, Sing
     uint256 private constant _MAX_PROTOCOL_FEE_PERCENTAGE = 1e18; // 100%
 
     // These are copied from ProtocolFeesCollector
-    uint256 private constant _MAX_PROTOCOL_SWAP_FEE_PERCENTAGE = 50e16; // 50%
+    uint256 private constant _MAX_PROTOCOL_SWAP_FEE_PERCENTAGE = 1e18; // 100%
     uint256 private constant _MAX_PROTOCOL_FLASH_LOAN_FEE_PERCENTAGE = 1e16; // 1%
 
     constructor(
